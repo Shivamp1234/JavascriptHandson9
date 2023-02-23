@@ -38,7 +38,7 @@ sum(3,4);</pre><br>
         };
         girl ();</pre>
     <p>Answer:</p>
-    <pre>undefined</pre><br>
+    <pre>undefined,because the console.log() statement is before the initialization var x=20;</pre><br>
     <pre>Question 5 : Print output: 
         var x = 21;
         girl ();
@@ -49,7 +49,9 @@ sum(3,4);</pre><br>
         };</pre>
     <pre>Answer:</pre>
     <pre>undefined 
-21</pre><br>
+21
+In the first line the girl(); function will print undefined because in the girl() function console.log() statement is before the initialization var x=20; and in the second line 21 will be printed as after the function call there is a console.log() statement which prints x whose value is var x=21;
+</pre><br>
     <pre>Question 6 : Print output
 
         var x = 21;
@@ -68,7 +70,9 @@ sum(3,4);</pre><br>
         };</p>
     <p>Answer:</pre>
     <pre>20
-40</pre><br>
+40
+In the first line  20 is printed as the value of variable x in the function a() is 20 and in the second line 40 is printed as the value of variable x in function b() is 40
+</pre><br>
     <p>Question 7 : Write a function that accepts parameter n and returns factorial of n</p>
     <p>Answer:</p>
     <pre>function factorial(n){
@@ -90,9 +94,11 @@ sum(3,4);</pre><br>
             console.log(`i am from ${data} and My batch is EA${batch}`)
         }
         
-        DisplayData(""PrepBytes"", FindSum(10, 9));</pre>
+        DisplayData("PrepBytes", FindSum(10, 9));</pre>
       <p>Answer:</p>
-      <pre>i am from PrepBytes and My batch is EA19</pre><br>
+      <pre>i am from PrepBytes and My batch is EA19
+In this case the DisplayData function has two parameters data and batch and when the DisplayData function is called the first value is a string "PrepBytes" and the other is a function FindSum which will return sum of 2 values passed to the function ,therefore when we console.log() the data is a string and batch is the value returned from the FindSum() function
+      </pre><br>
       <pre>Question 2 : Guess the output
 
         Abc();
@@ -101,7 +107,9 @@ sum(3,4);</pre><br>
             console.log(value);
         }</pre>
       <p>Answer:</p>
-      <pre>ReferenceError as the function cannot be accessed before initialization</pre><br>
+      <pre>ReferenceError as the function cannot be accessed before initialization
+In this case the function Abc() is accessed before its initialization tgherefore it will give an referenceerror
+      </pre><br>
       <pre>Question 3 : Guess the output
 
         var a = 10;
@@ -110,7 +118,7 @@ sum(3,4);</pre><br>
             var a = 20;
         })();</pre>
       <p>Answer:</p>
-      <pre>undefined</pre><br>
+      <pre>undefined,because the variable is printed before assigning any value to it</pre><br>
       <pre>Question 4 : Guess the Output
         const greet =  function(name){
             return function(m){
